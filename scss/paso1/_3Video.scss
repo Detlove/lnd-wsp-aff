@@ -1,0 +1,38 @@
+.video{
+    width: 92%;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    iframe{
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    &__title{
+        background-color: rgba(255, 255, 255, .1);
+        color: hsl(0, 0%, 95%);
+        justify-content: space-between;
+        padding: 15px 10px;
+        font-size: 16px;
+        #video_t{
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            span{
+                background-color: $COLOR2;
+                color: hsl(0, 0%, 5%);
+                font-weight: 800;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px){
+    .video{
+        &__title{
+            font-size: 20px;
+        }
+    }
+}

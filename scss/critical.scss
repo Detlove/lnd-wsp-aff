@@ -1,0 +1,37 @@
+//RESET CONFIGS
+@import 'library/RESET';
+
+//VARIABLES
+$COLOR1 : #fff;
+$COLOR2 : #3AFF66;
+
+
+$FONT14: #{"min(max(3.5vw),14px)"};
+$FONT16: #{"min(max(4vw),16px)"};
+$FONT18: #{"min(max(4.5vw),18px)"};
+$FONT20: #{"min(max(5vw),20px)"};
+$FONT22: #{"min(max(5.5vw),22px)"};
+$FONT24: #{"min(max(6vw),24px)"};
+$FONT26: #{"min(max(6.5vw),26px)"};
+$FONT28: #{"min(max(7vw),28px)"};
+$FONT30: #{"min(max(7.5vw),30px)"};
+$FONT32: #{"min(max(8vw),32px)"};
+
+//STYLES
+
+body {
+    //font-family : monospace;
+    color       : #000;
+    background-color: #fff;
+    font-family: 'Montserrat';
+
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@import 'index/_1Present';
+@import 'index/2Banner';
+@import 'index/3Objs';
+@import 'index/4Bio';
+@import 'index/5Copy';

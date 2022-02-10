@@ -1,0 +1,42 @@
+@property --vwrs {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.view_count{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+    background-color: rgba(255, 255, 255, 0.15);
+    width: fit-content;
+    padding: 3px 10px 3px 4px;
+    border-radius: 5px;
+    animation: pulse .7s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate;
+    z-index: 1;
+    img{
+        width: 25px;
+    }
+    span{
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        transition: --vwrs linear 1.2s 1s;
+        counter-set: num var(--vwrs);
+        &::before{
+            content: counter(num);
+        }
+    }
+}
+
+@keyframes pulse {
+    0%{
+        opacity: .7;
+    }
+    100%{
+        opacity: 1;
+    }
+}

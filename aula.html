@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/paso1.min.css">
+    <link rel="preconnect" href="https://player.vimeo.com"/>
+    <link rel="preconnect" href="https://i.vimeocdn.com"/>
+    <link rel="preconnect" href="https://f.vimeocdn.com"/>
+    <link rel="preconnect" href="https://fresnel.vimeocdn.com"/>
+    <title></title>
+</head>
+<body>
+    <picture class="body__bg">
+        <source media="(min-width: 800px)" srcset="assets/img/aula_bg_pc.jpg">
+
+        <img src="assets/img/aula_bg.jpg">
+    </picture>
+
+    <div class="view_count">
+        <img src="assets/img/people.svg">
+        <span id="viewers"></span>
+    </div>
+
+    <section class="progress">
+        <div class="progress__cont">
+            <span id="pnt">% Completado</span>
+            <div class="progress__bar">
+                <div class="progress__bar__fill" id="pnt_bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video" id="video">
+        <div class="video__title">
+            <h1 id="video_t"></h1>
+            <!-- <span id="video_duration">23m</span> -->
+        </div>
+    </section>
+
+    <section class="playlist" id="playlist_section">
+        <div class="playlist__cont">
+            <span class="playlist__title">Siguiente Clase</span>
+
+            <div class="playlist__item" id="playlist">
+
+                <div class="playlist__item__text">
+                    <span id="playlist_next_n">CLASE </span>
+                    <h2 id="playlist_next_t"></h2>
+                </div>
+            </div>
+
+            <span class="playlist__message">Necesitas terminar de ver el video para desbloquear la siguiente clase</span>
+
+        </div>
+        
+    </section>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script src="js/aula.js"></script>
+</body>
+</html>

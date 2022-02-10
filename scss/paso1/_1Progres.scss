@@ -1,0 +1,49 @@
+$tr-duration: 1s;
+
+
+@property --pnt {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.progress{
+    color: rgb(255, 255, 255);
+    &__cont{
+        width: 92%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    span{
+        font-size: $FONT20;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        transition: --pnt $tr-duration;
+        counter-set: num var(--pnt);
+        &::before{
+            content: counter(num);
+            font-weight: 800; 
+        }
+    }
+
+    &__bar{
+        width: 100%;
+        height: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        padding: 2px 4px;
+        &__fill{
+            transition: width $tr-duration;
+            width: 0;
+            height: 70%;
+            background-color: $COLOR2;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.objs{
+    background-color: #000;
+    color: $COLOR1;
+    padding: 30px 0 75px 0;
+    &__cont{
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+
+    }
+    h2{
+        font-weight: 800;
+        font-size: $FONT22;
+        text-align: center;
+        color: $COLOR2;
+        margin-bottom: 30px;
+        u{
+            color: $COLOR1;
+            font-weight: 500;
+        }
+    }
+    &__itemscnt{
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+        margin-bottom: 35px;
+    }
+    &__item{
+        font-weight: 400;
+        font-size: $FONT18;
+        span{
+            font-weight: 700;
+            background-color: #FF0000;
+            padding: 0 4px;
+        }
+    }
+    button{
+        background-color: $COLOR2;
+        color: #000;
+        font-weight: 800;
+        font-size: $FONT18;
+        padding: 12px 0;
+        width: 100%;
+        animation: wobble 2.5s ease infinite;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .objs{
+        h2{
+            margin-bottom: 40px;
+        }
+        &__itemscnt{
+            row-gap: 30px;
+            margin-bottom: 60px;
+        }
+        &__item{
+            font-size: $FONT20;
+        }
+        button{
+            width: fit-content;
+            padding: 12px 30px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.present{
+    color: $COLOR1;
+    // background: url(../img/bg__mb.png);
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
+    // background-position: center top;
+    padding-top: 320px;
+    text-align: center;
+    position: relative;
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        img{
+            //height: 100%;
+            //object-fit: cover;
+        }
+    }
+    &__cont{
+        background-image: linear-gradient(transparent 0%, #000 15%);
+        padding-bottom: 40px;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+    &__text{
+        width: 95%;
+        margin: 0 auto;
+    }
+    &__prem{
+        display: block;
+        color: $COLOR2;
+        font-size: $FONT14;
+        margin-bottom: 10px;
+    }
+
+    h1{
+        font-size: $FONT22;
+        font-weight: 500;
+        margin-bottom: 15px;
+        span{
+            font-weight: 800;
+
+        }
+    }
+    p{
+        font-weight: 300;
+        font-size: $FONT16;
+        margin-bottom: 20px;
+    }
+    button{
+        background-color: $COLOR2;
+        color: #000;
+        font-weight: 800;
+        font-size: $FONT18;
+        padding: 12px 0;
+        width: 100%;
+        animation: wobble 2.5s ease infinite;
+        cursor: pointer;
+    }
+    &__duration{
+        display: none;
+    }
+}
+
+@keyframes wobble {
+    0% { transform: translateX(0%); }
+    10% { transform: translateX(-5px); }
+    20% { transform: translateX(4px); }
+    30% { transform: translateX(-3px); }
+    40% { transform: translateX(2px); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+
+@media screen and (min-width: 800px){
+    .present{
+        // background: url(../img/bg__pc.png);
+        // background-size: cover;
+        // background-position: 45% center;
+
+        text-align: left;
+        padding: 120px 0 80px 0;
+
+        &__bg{
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: none;
+        }
+        &__text{
+            width: 90%;
+            grid-column: 2/3;
+            margin: 0;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+        button{
+            width: fit-content;
+            padding: 12px 80px;
+            margin-bottom: 20px;
+        }
+        &__duration{
+            display: block;
+            font-size: 15px;
+            font-weight: 400;
+            padding-left: 25px;
+        }
+    }
+}

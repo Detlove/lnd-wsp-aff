@@ -1,0 +1,120 @@
+.bio{
+    background-color: #181818;
+    color: $COLOR1;
+    position: relative;
+    &__bg{ 
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 5/4;
+        top: 0;
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__cont{
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__photo{
+        width: 80%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::before{
+            content: 'GERMAN REGALADO';
+            position: absolute;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-size: $FONT22;
+            font-weight: 800;
+            color: #fff;
+            margin-left: -18px;
+        }
+    }
+
+    &__text{
+        padding: 40px 0 60px 0;
+        h2, h3, span{
+            width: 80%;
+            margin: 0 auto; 
+        }
+        h2{
+            font-size: $FONT18;
+            color: #9F9F9F;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        h3{
+            font-weight: 800;
+            font-size: $FONT22;
+            margin-bottom: 5px;
+        }
+        span{
+            display: block;
+            color: $COLOR2;
+            font-size: $FONT14;
+            margin-bottom: 25px;
+        }
+        &__itemscnt{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            margin-bottom: 40px;
+        }
+        &__item{
+            display: flex;
+            column-gap: 7px;
+            img{
+                width: 25px;
+            }
+            p{
+                font-size: $FONT16;
+            }
+        }
+        button{
+            background-color: $COLOR2;
+            color: #000;
+            font-weight: 800;
+            font-size: $FONT18;
+            padding: 12px 0;
+            width: 80%;
+            margin: 0 auto;
+            animation: wobble 2.5s ease infinite;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .bio{
+        position: relative;
+        &__bg{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+        }
+        &__cont{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 80px 0;
+            position: relative;
+        }
+        &__photo{
+            width: 75%;
+            aspect-ratio: 1;
+            justify-self: flex-end;
+            align-self: center;
+            margin-right: -20px;
+        }
+        &__text{
+            width: 80%;
+            justify-self: flex-end;
+            padding: 0;
+        }
+    }
+}

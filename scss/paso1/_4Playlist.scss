@@ -1,0 +1,92 @@
+.playlist{
+    color: #fff;
+    padding: 60px 0;
+    span{
+        display: block;
+        text-align: center;
+    }
+    &__cont{
+        width: 420px;
+        max-width: 92%;
+        margin: 0 auto;
+    }
+    &__title{
+        font-size: $FONT20;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    &__message{
+        font-size: $FONT16;
+    }
+    
+    &__item{
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 20px;
+        position: relative;
+        img, &__text, svg{
+            opacity: .7;
+            transition: opacity .5s ease;
+        }
+        picture{
+            position: relative;
+            width: 180px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+            svg{
+                position: absolute;
+                height: 50%;
+                width: auto;
+            }
+        }
+        &__text{
+            padding: 15px 15px 15px 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 210px;
+            span{
+                text-align: left;
+                font-size: 11px;
+                margin-bottom: 4px;
+            }
+            h2{
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+        
+
+        &.unlock{
+            animation: wobble 2.5s ease infinite;
+            img, .playlist__item__text{
+                opacity: 1;
+            }
+            svg{
+                opacity: 0;
+            }
+        }
+
+    }
+}
+
+@keyframes wobble {
+    0% { transform: translateX(0%); }
+    10% { transform: translateX(-5px); }
+    20% { transform: translateX(4px); }
+    30% { transform: translateX(-3px); }
+    40% { transform: translateX(2px); }
+    50% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
