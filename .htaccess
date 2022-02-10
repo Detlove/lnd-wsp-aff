@@ -2,6 +2,9 @@ Options +FollowSymLinks
 
 RewriteEngine on
 
-##RewriteRule ^([-a-zA-Z0-9]+)$ $1.html
-
 RewriteRule ^aula-([0-9])$ aula.html?step=$1
+
+##Force HTTPS
+
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
